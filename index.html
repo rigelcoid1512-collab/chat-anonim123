@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat Anonim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <div id="auth-section">
+      <h2>Masuk untuk Chat</h2>
+      <p>Buat nama samaranmu dan mulai chat!</p>
+      <input type="text" id="username" placeholder="Nama Samaran" />
+      <button id="login-btn">Login dengan Google</button>
+    </div>
+
+    <div id="chat-section" style="display: none;">
+      <div class="chat-header">
+        <span>Halo, <span id="user-display"></span>!</span>
+        <button id="logout-btn">Logout</button>
+      </div>
+      <div class="chat-box" id="chat-box"></div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Ketik pesan..." />
+        <button id="send-btn">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <!-- Konfigurasi Firebase -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Script Utama -->
+  <script src="script.js"></script>
+</body>
+</html>
